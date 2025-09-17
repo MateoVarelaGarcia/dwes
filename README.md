@@ -1,64 +1,52 @@
 # DWES
 
-📘 Guía de Buenas Prácticas para README.md
-https://via.placeholder.com/800x300?text=Gu%C3%ADa+Completa+para+README.md+en+GitHub
+# 📘 Guía de Buenas Prácticas para README.md
 
-https://img.shields.io/badge/Estado-Completado-success
-https://img.shields.io/github/stars/tu-usuario/tu-repositorio?style=social
-https://img.shields.io/badge/versi%C3%B3n-1.0.0-blue
-https://img.shields.io/badge/Licencia-MIT-green
-https://img.shields.io/github/repo-size/tu-usuario/tu-repositorio
+![Banner Guía README](https://via.placeholder.com/800x300?text=Guía+Completa+para+README.md+en+GitHub)
 
-📚 Índice
-Descripción del Proyecto
+![Estado](https://img.shields.io/badge/Estado-Completado-success)
+![GitHub stars](https://img.shields.io/github/stars/tu-usuario/tu-repositorio?style=social)
+![Última versión](https://img.shields.io/badge/versión-1.0.0-blue)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-green)
+![Tamaño del repo](https://img.shields.io/github/repo-size/tu-usuario/tu-repositorio)
 
-Estado del Proyecto
+## 📚 Índice
 
-Demostración
+- [Descripción del Proyecto](#-descripción-del-proyecto)
+- [Estado del Proyecto](#-estado-del-proyecto)
+- [Demostración](#-demostración)
+- [Acceso al Proyecto](#-acceso-al-proyecto)
+- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+- [Contribuyentes](#-personas-contribuyentes)
+- [Desarrolladores](#-personas-desarrolladoras-del-proyecto)
+- [Licencia](#-licencia)
 
-Acceso al Proyecto
+## 📋 Descripción del Proyecto
 
-Tecnologías Utilizadas
+**NombreDelProyecto** es una aplicación innovadora diseñada para [breve descripción de su propósito principal]. Desarrollada con las mejores prácticas de la industria, ofrece una solución robusta y escalable para [problema que resuelve].
 
-Contribuyentes
+**Características principales:**
+- **Funcionalidad principal 1:** Descripción breve de lo que hace
+- **Funcionalidad principal 2:** Descripción breve de lo que hace
+- **Interfaz intuitiva:** Diseño moderno y fácil de usar
+- **Alto rendimiento:** Optimizado para máxima eficiencia
+- **Escalable:** Arquitectura preparada para crecimiento
 
-Desarrolladores
+## 📈 Estado del Proyecto
 
-Licencia
+**Versión actual:** 1.0.0 (Estable)
 
-📋 Descripción del Proyecto
-NombreDelProyecto es una aplicación innovadora diseñada para [breve descripción de su propósito principal]. Desarrollada con las mejores prácticas de la industria, ofrece una solución robusta y escalable para [problema que resuelve].
+**Próximas características:**
+- [ ] Funcionalidad planeada 1
+- [ ] Funcionalidad planeada 2
+- [ ] Integración con [tecnología/API]
+- [ ] Mejoras de rendimiento
+- [ ] Soporte para móviles
 
-Características principales:
+## 🎥 Demostración
 
-Funcionalidad principal 1: Descripción breve de lo que hace
-
-Funcionalidad principal 2: Descripción breve de lo que hace
-
-Interfaz intuitiva: Diseño moderno y fácil de usar
-
-Alto rendimiento: Optimizado para máxima eficiencia
-
-Escalable: Arquitectura preparada para crecimiento
-
-📈 Estado del Proyecto
-Versión actual: 1.0.0 (Estable)
-
-Próximas características:
-
-Funcionalidad planeada 1
-
-Funcionalidad planeada 2
-
-Integración con [tecnología/API]
-
-Mejoras de rendimiento
-
-Soporte para móviles
-
-🎥 Demostración
-Ejemplo de Código
-javascript
+### Ejemplo de Código
+```javascript
 // Ejemplo básico de implementación
 function ejemplo() {
   console.log("Hola mundo desde mi proyecto");
@@ -73,8 +61,6 @@ Demo en vivo: https://tu-usuario.github.io/tu-repositorio
 Repositorio GitHub: https://github.com/tu-usuario/tu-repositorio
 
 Instalación local:
-
-bash
 # Clonar el repositorio
 git clone https://github.com/tu-usuario/tu-repositorio.git
 
@@ -126,8 +112,6 @@ GitHub: @usuario-backend
 
 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-text
 Copyright (c) 2024 Tu Nombre
 
 Permiso concedido, libre de cargos, a cualquier persona que obtenga una copia
