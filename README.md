@@ -1,12 +1,4 @@
-# dwes
-📘 Guía de Buenas Prácticas para README.md
-https://via.placeholder.com/800x300?text=Gu%C3%ADa+Completa+para+README.md+en+GitHub
-
-https://img.shields.io/badge/Estado-Completado-success
-https://img.shields.io/github/stars/facebook/react?style=social
-https://img.shields.io/github/package-json/v/facebook/react
-https://img.shields.io/badge/Licencia-MIT-blue
-https://img.shields.io/github/repo-size/facebook/react
+# DWES
 
 📚 Índice
 Descripción del Proyecto
