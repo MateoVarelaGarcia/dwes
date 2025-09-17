@@ -90,29 +90,29 @@ Control de versiones: Git, GitHub
 👥 Personas Contribuyentes
 Colaboradores Destacados
 Nombre 1 - Rol: Descripción de contribuciones
-GitHub: @usuario1
+GitHub: @MateoVarelaGarcia
 
 Nombre 2 - Rol: Descripción de contribuciones
-GitHub: @usuario2
+GitHub: @MateoVarelaGarcia
 
 Nombre 3 - Rol: Descripción de contribuciones
-GitHub: @usuario3
+GitHub: @MateoVarelaGarcia
 
 👩💻 Personas Desarrolladoras del Proyecto
 Equipo Principal
 Tu Nombre - Desarrollador Principal
-GitHub: @tu-usuario
-Email: tu.email@ejemplo.com
+GitHub: @MateoVarelaGarcia
+Email: mvarelag24@fpcoruna.afundación.org
 
 Colaborador 1 - Desarrollador Frontend
-GitHub: @usuario-frontend
+GitHub: @MateoVarelaGarcia
 
 Colaborador 2 - Desarrollador Backend
-GitHub: @usuario-backend
+GitHub: @MateoVarelaGarcia
 
 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
-Copyright (c) 2024 Tu Nombre
+Copyright (c) 2024 Mateo
 
 Permiso concedido, libre de cargos, a cualquier persona que obtenga una copia
 de este software y archivos de documentación asociados (el "Software"), para tratar
