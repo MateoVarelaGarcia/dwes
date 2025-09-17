@@ -43,7 +43,7 @@
 - [ ] Mejoras de rendimiento
 - [ ] Soporte para móviles
 
-##🔗 Acceso al Proyecto
+## 🔗 Acceso al Proyecto
 Demo en vivo: https://tu-usuario.github.io/tu-repositorio
 
 Repositorio GitHub: https://github.com/tu-usuario/tu-repositorio
