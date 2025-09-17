@@ -49,7 +49,6 @@ Demo en vivo: https://tu-usuario.github.io/tu-repositorio
 Repositorio GitHub: https://github.com/tu-usuario/tu-repositorio
 
 Instalación local:
-bash
 # Clonar el repositorio
 git clone https://github.com/tu-usuario/tu-repositorio.git
 
@@ -61,6 +60,7 @@ npm install
 
 # Ejecutar en modo desarrollo
 npm start
+
 🛠 Tecnologías Utilizadas
 Frontend: React 18, TypeScript, Tailwind CSS
 
