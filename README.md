@@ -2,8 +2,6 @@
 
 # 📘 Guía de Buenas Prácticas para README.md
 
-![Banner Guía README](https://via.placeholder.com/800x300?text=Guía+Completa+para+README.md+en+GitHub)
-
 ![Estado](https://img.shields.io/badge/Estado-Completado-success)
 ![GitHub stars](https://img.shields.io/github/stars/tu-usuario/tu-repositorio?style=social)
 ![Última versión](https://img.shields.io/badge/versión-1.0.0-blue)
