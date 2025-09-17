@@ -14,7 +14,6 @@
 
 - [Descripción del Proyecto](#-descripción-del-proyecto)
 - [Estado del Proyecto](#-estado-del-proyecto)
-- [Demostración](#-demostración)
 - [Acceso al Proyecto](#-acceso-al-proyecto)
 - [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 - [Contribuyentes](#-personas-contribuyentes)
@@ -76,7 +75,7 @@ Despliegue: Netlify, Vercel, Heroku
 
 Control de versiones: Git, GitHub
 
-👥 Personas Contribuyentes
+## 👥 Personas Contribuyentes
 Colaboradores Destacados
 Nombre 1 - Rol: Descripción de contribuciones
 GitHub: @MateoVarelaGarcia
@@ -87,7 +86,7 @@ GitHub: @MateoVarelaGarcia
 Nombre 3 - Rol: Descripción de contribuciones
 GitHub: @MateoVarelaGarcia
 
-👩💻 Personas Desarrolladoras del Proyecto
+## 👩💻 Personas Desarrolladoras del Proyecto
 Equipo Principal
 Tu Nombre - Desarrollador Principal
 GitHub: @MateoVarelaGarcia
@@ -99,7 +98,7 @@ GitHub: @MateoVarelaGarcia
 Colaborador 2 - Desarrollador Backend
 GitHub: @MateoVarelaGarcia
 
-📄 Licencia
+## 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 Copyright (c) 2024 Mateo
 
