@@ -43,18 +43,6 @@
 - [ ] Mejoras de rendimiento
 - [ ] Soporte para móviles
 
-## 🎥 Demostración
-
-### Ejemplo de Código
-```javascript
-// Ejemplo básico de implementación
-function ejemplo() {
-  console.log("Hola mundo desde mi proyecto");
-}
-Capturas de Pantalla
-https://via.placeholder.com/600x400?text=Captura+de+Pantalla+1
-https://via.placeholder.com/600x400?text=Captura+de+Pantalla+2
-
 🔗 Acceso al Proyecto
 Demo en vivo: https://tu-usuario.github.io/tu-repositorio
 
