@@ -1,5 +1,10 @@
 <?php
-$db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
+session_start();
+
+$db = new mysqli('localhost', 'root', '1234', 'mysitedb');
+if ($db->connect_error) {
+    die('Fail: ' . $db->connect_error);
+}
 ?>
 
 <html>
@@ -9,6 +14,7 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
     <style>
         body { font-family: Arial; background-color: #f4f4f4; text-align: center; }
         h1 { color: #333; }
+
         .pelicula {
             display: inline-block;
             margin: 15px;
@@ -17,27 +23,53 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
             border: 1px solid #ddd;
             border-radius: 8px;
             width: 200px;
+
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+            cursor: pointer;
         }
+
+        .pelicula:hover {
+            opacity: 0.9; 
+            transform: scale(1.03);
+        }
+
         img { width: 180px; height: 260px; border-radius: 6px; object-fit: cover; }
         a { text-decoration: none; color: #007BFF; font-weight: bold; }
         a:hover { color: #0056b3; }
     </style>
 </head>
 <body>
-<h1>Catálogo de Películas</h1>
+<header>
+    <h1>Catálogo de Películas</h1>
+    <nav style="margin-bottom: 20px;">
+        <?php 
+        if (isset($_SESSION['user_id'])) {
+            echo '<p>Usuario logueado | <a href="logout.php">Cerrar Sesión</a></p>';
+        } else {
+            echo '<p><a href="login.html">Iniciar Sesión</a> | <a href="register.html">Registrarse</a></p>';
+        }
+        ?>
+    </nav>
+</header>
 
 <?php
 $query = 'SELECT * FROM tPeliculas';
-$result = mysqli_query($db, $query) or die('Query error');
 
-while ($row = mysqli_fetch_array($result)) {
+$result = $db->query($query);
+
+if (!$result) {
+    die('Query error: ' . $db->error);
+}
+
+while ($row = $result->fetch_assoc()) {
     echo '<div class="pelicula">';
-    echo '<img src="'.$row['url_imagen'].'" alt="'.$row['nombre'].'"><br>';
-    echo '<a href="detail.php?id='.$row['id'].'">'.$row['nombre'].'</a><br>';
-    echo '<p>'.$row['director'].' ('.$row['año'].')</p>';
+
+    echo '<img src="'.htmlspecialchars($row['url_imagen']).'" alt="'.htmlspecialchars($row['nombre']).'"><br>';
+    echo '<a href="detail.php?id='.htmlspecialchars($row['id']).'">'.htmlspecialchars($row['nombre']).'</a><br>';
+    echo '<p>'.htmlspecialchars($row['director']).' ('.htmlspecialchars($row['año']).')</p>';
     echo '</div>';
 }
-mysqli_close($db);
+$db->close();
 ?>
 
 </body>

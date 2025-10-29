@@ -1,32 +1,41 @@
 <?php
+session_start(); 
 
-$db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
+$db = new mysqli('localhost', 'root', '1234', 'mysitedb');
+if ($db->connect_error) { die('Fallo en la conexión a la base de datos.'); }
 
-$new_comment = $_POST['new_comment'];
-$pelicula_id = $_POST['pelicula_id'];
-$usuario_id = $_POST['usuario_id'];
+$user_id_a_insertar = $_SESSION['user_id'] ?? null;
+$pelicula_id = $_POST['pelicula_id'] ?? null;
+$comentario = $_POST['new_comment'] ?? null;
 
-$query = "INSERT INTO tComentarios (comentario, usuario_id, pelicula_id) 
-          VALUES ('$new_comment', '$usuario_id', '$pelicula_id')";
-mysqli_query($db, $query) or die('Error al insertar comentario');
-
-echo "<h3>Comentarios actualizados:</h3>";
-echo "<ul>";
-
-$query2 = 'SELECT c.comentario, c.fecha, u.nombre 
-           FROM tComentarios c
-           LEFT JOIN tUsuarios u ON c.usuario_id = u.id
-           WHERE c.pelicula_id='.$pelicula_id.'
-           ORDER BY c.fecha DESC';
-$result2 = mysqli_query($db, $query2) or die('Query error');
-
-while ($row = mysqli_fetch_array($result2)) {
-    echo '<li><b>'.$row['nombre'].'</b> ('.$row['fecha'].')<br>'.$row['comentario'].'</li>';
+if (is_null($pelicula_id) || is_null($comentario)) {
+    die('<p>Faltan datos para el comentario.</p>');
 }
 
-echo "</ul>";
+if (!is_null($user_id_a_insertar)) {
+    $insert_query = "INSERT INTO tComentarios (comentario, pelicula_id, usuario_id) VALUES (?, ?, ?)";
+    $stmt = $db->prepare($insert_query);
+    $stmt->bind_param("sii", $comentario, $pelicula_id, $user_id_a_insertar);
+} else {
 
-mysqli_close($db);
+    $insert_query = "INSERT INTO tComentarios (comentario, pelicula_id) VALUES (?, ?)";
+    $stmt = $db->prepare($insert_query);
+    $stmt->bind_param("si", $comentario, $pelicula_id);
+}
 
-echo '<p><a href="/detail.php?id='.$pelicula_id.'">Volver a la película</a></p>';
+if ($stmt->execute()) {
+    echo "<p>Nuevo comentario añadido.</p>";
+} else {
+    echo "<p>Error al añadir el comentario.</p>";
+}
+
+$stmt->close();
+$db->close();
 ?>
+<html>
+<body>
+    <?php
+    echo "<a href='/detail.php?pelicula_id=" . $pelicula_id . "'>Volver a la Película</a>";
+    ?>
+</body>
+</html>

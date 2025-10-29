@@ -1,45 +1,32 @@
 <?php
-// 1. Conexión a la base de datos (Ajusta los datos de conexión)
-$db = new mysqli('localhost', 'root', '1234', 'web_canciones');
-if ($db->connect_error) {
-    die('<p>Error de conexión a la base de datos.</p>');
-}
+session_start();
 
-// 2. Recuperar datos
+$db = new mysqli('localhost', 'root', '1234', 'mysitedb');
+if ($db->connect_error) { die('<p>Error de conexión a la base de datos.</p>'); }
+
 $email_posted = $_POST['f_email'] ?? '';
 $password_posted = $_POST['f_password'] ?? '';
 
-// 3. Buscar el usuario y obtener el hash de la contraseña (Prepared Statement)
-// Consulta: SELECT id, contraseña FROM tUsuarios WHERE email = ?
 $query = "SELECT id, contraseña FROM tUsuarios WHERE email = ?";
 $stmt = $db->prepare($query);
-
-// Enlazar parámetro 's' (string)
 $stmt->bind_param("s", $email_posted);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 0) {
-    // Usuario no encontrado [cite: 222-223]
-    echo '<p>Usuario no encontrado con ese email</p>';
-    $stmt->close();
+    echo '<p>Usuario o contraseña incorrectos. <a href="login.html">Volver</a></p>';
 } else {
-    // Usuario encontrado
     $only_row = $result->fetch_assoc();
-    $stmt->close();
-
-    // 4. Verificar la contraseña usando password_verify() [cite: 228]
+    
     if (password_verify($password_posted, $only_row['contraseña'])) {
-        // Éxito: Contraseña correcta. Iniciar sesión. [cite: 98]
-        session_start();
-        $_SESSION['user_id'] = $only_row['id']; // Almacena el ID del usuario [cite: 101]
-        header('Location: main.php'); // Redirigir a la página principal [cite: 99]
+        $_SESSION['user_id'] = $only_row['id'];
+        $stmt->close();
+        $db->close();
+        header('Location: main.php');
         exit;
     } else {
-        // Contraseña incorrecta [cite: 222-223]
-        echo '<p>Contraseña incorrecta</p>';
+        echo '<p>Usuario o contraseña incorrectos. <a href="login.html">Volver</a></p>';
     }
 }
-
 $db->close();
 ?>
