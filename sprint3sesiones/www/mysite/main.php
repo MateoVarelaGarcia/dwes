@@ -43,13 +43,14 @@ if ($db->connect_error) {
 <header>
     <h1>Catálogo de Películas</h1>
     <nav style="margin-bottom: 20px;">
-        <?php 
-        if (isset($_SESSION['user_id'])) {
-            echo '<p>Usuario logueado | <a href="logout.php">Cerrar Sesión</a></p>';
-        } else {
-            echo '<p><a href="login.html">Iniciar Sesión</a> | <a href="register.html">Registrarse</a></p>';
-        }
-        ?>
+    <?php 
+    if (isset($_SESSION['user_id'])) {
+        echo '<p>Usuario logueado | <a href="change_password.html">Cambiar Contraseña</a> | <a href="logout.php">Cerrar Sesión</a></p>';
+    } else {
+        echo '<p><a href="login.html">Iniciar Sesión</a> | <a href="register.html">Registrarse</a></p>';
+    }
+    ?>
+</nav>
     </nav>
 </header>
 
