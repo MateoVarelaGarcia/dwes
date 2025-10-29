@@ -31,6 +31,7 @@ if ($db->connect_error) {
         .pelicula:hover {
             opacity: 0.9; 
             transform: scale(1.03);
+            
         }
 
         img { width: 180px; height: 260px; border-radius: 6px; object-fit: cover; }
