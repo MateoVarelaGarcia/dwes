@@ -6,11 +6,25 @@
 </head>
 <body>
     <h1>Login</h1>
-    <form action="login.php" method="post">
-        <input name="f_email" type="text" placeholder="e-mail" required><br>
-        <input name="f_password" type="password" placeholder="Contraseña" required><br>
+    <form action="login.php" method="post" onsubmit="return validarLogin()" novalidate>
+        <input name="f_email" type="text" placeholder="e-mail" id="f_email" required><br>
+        <input name="f_password" type="password" placeholder="Contraseña" id="f_password" required><br>
         <input type="submit" value="Iniciar sesión">
     </form>
     <p>¿No tienes una cuenta? <a href="register.html">Regístrate</a></p>
+
+<script>
+function validarLogin() {
+
+    var email = document.getElementById('f_email').value;
+    var password = document.getElementById('f_password').value;
+
+    if (email === "" || password === "") {
+        alert("¡Alerta JS! Por favor, rellena ambos campos (e-mail y Contraseña) antes de continuar.");
+        return false;
+    }
+    return true;
+}
+</script>
 </body>
 </html>

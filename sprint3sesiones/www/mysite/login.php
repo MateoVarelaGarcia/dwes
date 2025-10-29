@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $db = new mysqli('localhost', 'root', '1234', 'mysitedb');
 if ($db->connect_error) { die('<p>Error de conexión a la base de datos.</p>'); }
 
