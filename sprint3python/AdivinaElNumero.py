@@ -2,7 +2,7 @@ import random
 import time
 
 def seleccionar_nivel():
-    print("\n--- 2. Elegir Nivel de Dificultad ---")
+    print("\n Elegir Nivel de Dificultad")
     while True:
         nivel = input("Elige el nivel (fácil/medio/difícil): ").strip().lower()
 
@@ -19,7 +19,7 @@ def seleccionar_nivel():
             print("Nivel no válido. Intenta de nuevo con 'fácil', 'medio' o 'difícil'.")
             time.sleep(0.5)
 
-    print(f"Nivel elegido: ¡El número secreto estará entre 1 y {max_num}!")
+    print(f"Nivel elegido: El número secreto estará entre 1 y {max_num}")
     numero_secreto = random.randint(1, max_num)
     print("El número secreto ha sido generado.")
     return numero_secreto, max_num
@@ -51,7 +51,7 @@ def jugar_adivina_numero():
         elif intento_usuario > numero_secreto:
             print("Demasiado alto. Intenta con un número menor.")
         else:
-            print("\n🎉🎉 ¡Felicidades! 🎉🎉")
+            print("\n Felicidades")
             print(f"Adivinaste el número secreto ({numero_secreto}) en **{intentos}** intentos.")
             adivinado = True
 
