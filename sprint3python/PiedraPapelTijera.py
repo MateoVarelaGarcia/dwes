@@ -66,7 +66,7 @@ def jugar_ronda(max_rondas):
 
         if resultado == 1:
             puntuacion_usuario += 1
-            print("✨ ¡Punto para ti! Has ganado la ronda.")
+            print("¡Punto para ti! Has ganado la ronda.")
         elif resultado == -1:
             puntuacion_cpu += 1
             print("¡Punto para la CPU! Has perdido la ronda.")
@@ -104,7 +104,7 @@ def main():
                 print("\n" + "#" * 50)
                 break
             elif respuesta == 'n':
-                print("\n¡Gracias por jugar! 👋 ¡Hasta la próxima!")
+                print("\n¡Gracias por jugar! ¡Hasta la próxima!")
                 return
             else:
                 print("Respuesta no válida. Por favor, introduce 's' o 'n'.")
