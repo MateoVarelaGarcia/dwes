@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-$db = new mysqli('localhost', 'root', '1234', 'mysitedb');
+$db = new mysqli('172.16.0.2', 'root', '1234', 'mysitedb');
 if ($db->connect_error) {
     die('Fail: ' . $db->connect_error);
+
 }
 ?>
 
